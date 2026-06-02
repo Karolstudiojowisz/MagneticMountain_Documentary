@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Mountain — Documentary Film 2024</title>
+<meta name="description" content="A documentary exploring the enigmatic Bosnian Pyramid Valley and its connection to human consciousness and ancient megalithic history.">
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.magdoc.pl">
+<meta property="og:title" content="Magnetic Mountain — Documentary Film 2024">
+<meta property="og:description" content="A documentary exploring the enigmatic Bosnian Pyramid Valley and its connection to human consciousness and ancient megalithic history.">
+<meta property="og:image" content="https://www.magdoc.pl/poster.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Magnetic Mountain — Documentary Film 2024">
+<meta name="twitter:description" content="A documentary exploring the enigmatic Bosnian Pyramid Valley and its connection to human consciousness and ancient megalithic history.">
+<meta name="twitter:image" content="https://www.magdoc.pl/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d0c0b;
+  --bg2: #161412;
+  --bg3: #1e1b18;
+  --text: #e6e0d5;
+  --text-muted: #7a736a;
+  --accent: #b8965a;
+  --accent-dim: rgba(184,150,90,0.15);
+  --border: rgba(230,224,213,0.1);
+  --serif: 'Spectral', Georgia, serif;
+  --sans: 'Syne', sans-serif;
+  --max: 1200px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  transition: background 0.4s, border-bottom 0.4s;
+}
+nav.solid {
+  background: rgba(13,12,11,0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+.nav-brand {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* VIDEO BACKGROUND — swap <video> tag when you have the .mp4 file */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+}
+/* PLACEHOLDER shown when no video file — remove this block once you add the <video> */
+.hero-video-bg .video-placeholder {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, #1a1208 0%, #0d0c0b 40%, #221a0e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(13,12,11,0.98) 0%, rgba(13,12,11,0.3) 50%, rgba(13,12,11,0.5) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 3rem 5rem;
+  max-width: 860px;
+  animation: fadeUp 1.2s ease both;
+}
+
+.hero-laurels {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.hero-laurels img {
+  width: 110px;
+  height: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .hero-laurels {
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .hero-laurels img {
+    width: 30vw;
+    max-width: 90px;
+  }
+}
+
+.hero-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 7vw, 8rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.hero-title span { display: block; }
+.hero-title .word-magnetic { font-style: italic; }
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.hero-credits {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+}
+.hero-credits strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 3rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  animation: fadeIn 2s ease 1s both;
+}
+.scroll-indicator::after {
+  content: '';
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ─── SECTIONS ─── */
+section {
+  padding: 6rem 3rem;
+}
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+}
+
+/* ─── ABOUT ─── */
+.about {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+.about-meta { }
+.about-meta .section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.meta-list {
+  list-style: none;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.meta-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.meta-list .label {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.meta-list .value {
+  text-align: right;
+  max-width: 55%;
+}
+.about-text { }
+.about-text p {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: #c8c2b8;
+  margin-bottom: 1.5rem;
+}
+.about-text p:first-child {
+  font-size: 1.3rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+/* ─── TRAILER ─── */
+.trailer { background: var(--bg); }
+.trailer-inner { }
+.trailer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+.trailer-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: #000;
+  overflow: hidden;
+}
+.trailer-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ─── GALLERY ─── */
+.gallery {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+.gallery-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.75rem;
+}
+.photo-slot {
+  background: var(--bg3);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  min-height: 220px;
+}
+.photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.photo-slot:hover img { transform: scale(1.04); }
+
+/* Mosaic layout for 16 photos */
+.photo-slot:nth-child(1)  { grid-column: span 7; }
+.photo-slot:nth-child(2)  { grid-column: span 5; }
+.photo-slot:nth-child(3)  { grid-column: span 5; }
+.photo-slot:nth-child(4)  { grid-column: span 7; }
+.photo-slot:nth-child(5)  { grid-column: span 4; }
+.photo-slot:nth-child(6)  { grid-column: span 4; }
+.photo-slot:nth-child(7)  { grid-column: span 4; }
+.photo-slot:nth-child(8)  { grid-column: span 6; }
+.photo-slot:nth-child(9)  { grid-column: span 6; }
+.photo-slot:nth-child(10) { grid-column: span 7; }
+.photo-slot:nth-child(11) { grid-column: span 5; }
+.photo-slot:nth-child(12) { grid-column: span 4; }
+.photo-slot:nth-child(13) { grid-column: span 4; }
+.photo-slot:nth-child(14) { grid-column: span 4; }
+.photo-slot:nth-child(15) { grid-column: span 5; }
+.photo-slot:nth-child(16) { grid-column: span 7; }
+
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .photo-slot:nth-child(n) { grid-column: span 1 !important; min-height: 180px; }
+}
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.4rem; }
+  .photo-slot:nth-child(n) { grid-column: span 1 !important; min-height: 140px; }
+}
+
+.director-photo-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.director-photo-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.director-photo-link:hover img {
+  transform: scale(1.06);
+  opacity: 0.5;
+}
+.director-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.director-overlay span {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--text);
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.director-photo-link:hover .director-overlay { opacity: 1; }
+
+/* ─── FESTIVALS ─── */
+.festivals { background: var(--bg); }
+.fest-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.fest-table thead tr {
+  border-bottom: 1px solid var(--accent);
+}
+.fest-table th {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  padding: 0 0 1rem;
+  text-align: left;
+}
+.fest-table th:last-child { text-align: right; }
+.fest-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.fest-table tbody tr:hover { background: var(--accent-dim); }
+.fest-table td {
+  padding: 1.25rem 0;
+  vertical-align: middle;
+}
+.fest-table td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.fest-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.fest-upcoming {
+  display: inline-block;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--accent-dim);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.75rem;
+  vertical-align: middle;
+}
+.fest-date {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.fest-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.fest-table tbody tr:hover { background: var(--accent-dim); }
+.fest-table tbody tr:hover .fest-name { color: var(--accent); }
+.fest-name a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.fest-name a:hover { color: var(--accent); }
+
+/* ─── DIRECTORS ─── */
+.directors {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
+.directors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+.director-card { }
+.director-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--bg3);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.director-photo .placeholder-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.director-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.director-name {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+.director-role {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.director-bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─── CONTACT ─── */
+.contact {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.contact-inner { max-width: 600px; margin: 0 auto; }
+.contact .section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+.contact-desc {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+.contact-email {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.2rem;
+  transition: opacity 0.2s;
+}
+.contact-email:hover { opacity: 0.7; }
+.press-note {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-brand {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ─── HAMBURGER MENU ─── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 300;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13,12,11,0.98);
+  z-index: 250;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+.nav-mobile a:hover { color: var(--accent); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  section { padding: 4rem 1.5rem; }
+  .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .directors-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .gallery-grid { /* handled in gallery section */ }
+  .hero-content { padding: 0 1.5rem 4rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .trailer-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero-title { font-size: 3.2rem; }
+  .hero-tagline { font-size: 1rem; }
+  .hero-meta { gap: 1.5rem; flex-wrap: wrap; }
+  .scroll-indicator { display: none; }
+  .about-text p:first-child { font-size: 1.1rem; }
+  .about-text p { font-size: 1rem; }
+  /* gallery handled above */
+  .fest-table thead { display: none; }
+  .fest-table tbody tr { display: flex; flex-direction: column; gap: 0.25rem; padding: 1.25rem 0; }
+  .fest-table td { display: block; padding: 0; }
+  .fest-table td:last-child { text-align: left; color: var(--accent); font-size: 0.8rem; }
+  .fest-upcoming { margin-left: 0; margin-top: 0.25rem; }
+  .contact-email { font-size: 0.85rem; word-break: break-all; }
+  .section-title { font-size: 1.8rem; }
+  footer { padding: 1.5rem; }
+  .footer-copy { font-size: 0.65rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="nav">
+  <a class="nav-brand" href="#">Magnetic Mountain</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#trailer">Trailer</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#festivals">Screenings</a></li>
+    <li><a href="#contact">Press</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile full-screen menu -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#trailer" class="mobile-link">Trailer</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#festivals" class="mobile-link">Screenings</a>
+  <a href="#contact" class="mobile-link">Press</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="top">
+
+  <!-- BACKGROUND VIDEO
+       HOW TO REPLACE: swap the <div class="video-placeholder"> block below
+       with a <video> element pointing to your .mp4 file, like this:
+       <video autoplay muted loop playsinline>
+         <source src="your-loop-video.mp4" type="video/mp4">
+       </video>
+  -->
+  <div class="hero-video-bg">
+    <video autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;opacity:0.45;">
+      <source src="loop.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-laurels">
+      <img src="laurel1.png" alt="Official Selection — 10th Pambujan International Film Festival 2026">
+      <img src="laurel2.png" alt="Official Selection — Berlin Indie Film Festival 2025">
+      <img src="laurel3.png" alt="Official Selection — Serbest International Film Festival 2025">
+      <img src="laurel4.png" alt="Semi-Finalist — Mindfield Film Festival Albuquerque 2026">
+    </div>
+    <p class="hero-eyebrow">A Documentary Film · 2024</p>
+    <h1 class="hero-title">
+      <span class="word-magnetic">Magnetic</span>
+      <span>Mountain</span>
+    </h1>
+    <p class="hero-tagline">Ancient secrets buried beneath the hills of Bosnia — and the mystery that could rewrite human history.</p>
+    <p class="hero-credits">
+      Directed by <strong>Karol Stępniewski</strong> &amp; <strong>Bartłomiej Walerczuk</strong>
+    </p>
+  </div>
+
+  <div class="scroll-indicator">Scroll</div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+
+      <div class="about-meta reveal">
+        <span class="section-label">About the Film</span>
+        <h2 class="section-title">Magnetic Mountain</h2>
+        <ul class="meta-list">
+          <li>
+            <span class="label">Year</span>
+            <span class="value">2024</span>
+          </li>
+          <li>
+            <span class="label">Directors</span>
+            <span class="value">Karol Stępniewski<br>Bartłomiej Walerczuk</span>
+          </li>
+          <li>
+            <span class="label">Producer</span>
+            <span class="value">Karol Chmielnicki</span>
+          </li>
+          <li>
+            <span class="label">Genre</span>
+            <span class="value">Documentary</span>
+          </li>
+          <li>
+            <span class="label">Language</span>
+            <span class="value">English</span>
+          </li>
+          <li>
+            <span class="label">Contact</span>
+            <span class="value"><a href="mailto:Magneticmountaindocumentary@gmail.com" style="color:var(--accent)">Press &amp; Distribution</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-text reveal reveal-delay-1">
+        <p>In the heart of Bosnia, nestled within the lush green hills of Visoko, lies a mystery that has fascinated explorers, archaeologists, and thrill-seekers from around the globe.</p>
+        <p>Beneath the soil, ancient secrets wait to be uncovered — secrets that could rewrite the history of human civilization. The Bosnian Pyramids, as they have come to be known, stand as towering enigmas, their origins debated, their purpose elusive. But what if these structures are more than just relics of the past? What if they are the key to understanding lost civilizations and the untold potential of human ingenuity?</p>
+        <p>This captivating documentary delves into the enigmatic Bosnian Pyramid Valley, unraveling its secrets and exploring its profound connection to human consciousness and ancient megalithic history. Through a fascinating journey, the film investigates the phenomenon of the Bosnian pyramids, examining their intriguing structures and potential transformative properties. Blending science, history, and spirituality, it invites viewers to reconsider humanity's ancient past and its enduring mysteries.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRAILER ─── -->
+<section class="trailer" id="trailer">
+  <div class="container">
+    <div class="trailer-header reveal">
+      <div>
+        <span class="section-label">Watch</span>
+        <h2 class="section-title" style="margin-bottom:0">Official Trailer</h2>
+      </div>
+    </div>
+    <div class="trailer-embed reveal reveal-delay-1">
+      <video
+        controls
+        preload="metadata"
+        poster="poster.jpg"
+        style="position:absolute;inset:0;width:100%;height:100%;background:#000;"
+      >
+        <source src="Trailer.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <span class="section-label reveal">Gallery</span>
+
+    <div class="gallery-grid reveal reveal-delay-1">
+
+      <div class="photo-slot"><img src="aerial.jpg" alt="Bosnian pyramids from above"></div>
+      <div class="photo-slot"><img src="bosnia_web-1.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-2.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-3.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-4.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-5.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-6.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-7.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-8.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-9.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-10.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-11.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-12.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="bosnia_web-13.jpg" alt="Bosnia"></div>
+      <div class="photo-slot"><img src="premiere1.jpg" alt="Magnetic Mountain premiere"></div>
+      <div class="photo-slot"><img src="premiere2.jpg" alt="Magnetic Mountain premiere"></div>
+
+    </div>
+
+      <!-- PHOTO 8 -->
+      <div class="photo-slot">
+    </div>
+  </div>
+</section>
+
+<!-- ─── FESTIVAL SCREENINGS ─── -->
+<section class="festivals" id="festivals">
+  <div class="container">
+    <span class="section-label reveal">Festival Circuit</span>
+    <h2 class="section-title reveal">Screenings &amp; Awards</h2>
+
+    <table class="fest-table reveal">
+      <thead>
+        <tr>
+          <th style="width:60%">Festival</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="fest-name"><a href="https://indiexfest.com/" target="_blank" rel="noopener">IndieX Film Fest</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">April 28, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://www.singaporefilmscript.com/" target="_blank" rel="noopener">Singapore Film and Script Festival</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">May 7, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://dokufest.com/" target="_blank" rel="noopener">DokuFest</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">July 4, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://filmfreeway.com/SeattleIndieMovieAwards" target="_blank" rel="noopener">Seattle Indie Film Festival</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">August 7, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://makedox.mk/" target="_blank" rel="noopener">MakeDox Creative Documentary Film Festival</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">August 5, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://filmfreeway.com/LondonIndependentFilmFestival" target="_blank" rel="noopener">London Independent Cinema Festival</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">August 20, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://mindfieldff.com/" target="_blank" rel="noopener">Mindfield Film Festival · Albuquerque</a></span></td>
+          <td><span class="fest-upcoming">Semi-Finalist</span></td>
+          <td class="fest-date">August 27, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://filmfreeway.com/IFAHF" target="_blank" rel="noopener">IFAHF — International Festival of Archaeological Films</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">September 10, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://filmfreeway.com/SpotlightDocumentaryAwards" target="_blank" rel="noopener">Spotlight Documentary Awards</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">November 2, 2026</td>
+        </tr>
+        <tr>
+          <td><span class="fest-name"><a href="https://liftoff.network/berlin-lift-off-film-festival/" target="_blank" rel="noopener">Berlin Lift-Off Film Festival</a></span></td>
+          <td><span class="fest-upcoming">Upcoming</span></td>
+          <td class="fest-date">February 4, 2027</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─── DIRECTORS ─── -->
+<section class="directors" id="directors">
+  <div class="container">
+    <span class="section-label reveal">Behind the Film</span>
+    <h2 class="section-title reveal">Directors</h2>
+    <div class="directors-grid">
+
+      <div class="director-card reveal">
+        <div class="director-photo" style="aspect-ratio: 4/3;">
+          <a href="https://www.instagram.com/bigbirdtheory/" target="_blank" rel="noopener" class="director-photo-link">
+            <img src="Karol.jpg" alt="Karol Stępniewski" style="object-position: center 12%;">
+            <div class="director-overlay"><span>@bigbirdtheory</span></div>
+          </a>
+        </div>
+        <h3 class="director-name">Karol Stępniewski</h3>
+        <p class="director-role">Director</p>
+      </div>
+
+      <div class="director-card reveal reveal-delay-1">
+        <div class="director-photo" style="aspect-ratio: 4/3;">
+          <a href="https://www.instagram.com/bartolome_valer/" target="_blank" rel="noopener" class="director-photo-link">
+            <img src="bartek.png" alt="Bartłomiej Walerczuk" style="object-position: center 10%;">
+            <div class="director-overlay"><span>@bartolome_valer</span></div>
+          </a>
+        </div>
+        <h3 class="director-name">Bartłomiej Walerczuk</h3>
+        <p class="director-role">Director</p>
+      </div>
+
+    </div>
+
+    <p class="director-bio reveal" style="margin-top: 2.5rem; max-width: 700px;">
+      Bartek and Karol have known each other since their university days, and the idea of finding themselves in Bosnia due to the Megaliths came up right after a camping trip among the Norwegian fjords. Initially, plans were slowed down by the lockdown, but if something is meant to happen, it will happen. That's when the "Wisdom of Nations" foundation came to their aid, which they stumbled upon "by accident."
+    </p>
+  </div>
+</section>
+
+<!-- ─── CONTACT / PRESS ─── -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="section-label reveal" style="display:block;margin-bottom:1rem">Press &amp; Distribution</span>
+    <h2 class="section-title reveal">Get in Touch</h2>
+    <p class="contact-desc reveal">
+      For press accreditation, distribution inquiries,<br>and screening requests.
+    </p>
+    <a class="contact-email reveal" href="mailto:Magneticmountaindocumentary@gmail.com">
+      Magneticmountaindocumentary@gmail.com
+    </a>
+    <p class="press-note reveal">
+      Press kit available upon request &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; © 2024 Magnetic Mountain
+    </p>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <span class="footer-brand">Magnetic Mountain · 2024</span>
+  <span class="footer-copy">Directed by Karol Stępniewski &amp; Bartłomiej Walerczuk</span>
+</footer>
+
+<script>
+// Nav solid on scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('solid', window.scrollY > 60);
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navMobile = document.getElementById('nav-mobile');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navMobile.classList.toggle('open');
+  document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navMobile.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(el => observer.observe(el));
+
+// iOS autoplay fix
+document.querySelectorAll('video[autoplay]').forEach(v => {
+  v.setAttribute('playsinline', '');
+  v.muted = true;
+  const tryPlay = () => v.play().catch(() => {});
+  tryPlay();
+  // iOS requires user gesture — unlock on first touch
+  document.addEventListener('touchstart', tryPlay, { once: true });
+  document.addEventListener('click', tryPlay, { once: true });
+});
+
+// Festival rows — click entire row
+document.querySelectorAll('.fest-table tbody tr').forEach(row => {
+  const link = row.querySelector('.fest-name a');
+  if (link) {
+    row.addEventListener('click', () => window.open(link.href, '_blank', 'noopener'));
+  }
+});
+</script>
+
+<style>
+/* ─── LIGHTBOX ─── */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.92);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  animation: fadeIn 0.2s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  box-shadow: 0 0 80px rgba(0,0,0,0.8);
+  cursor: default;
+  animation: scaleIn 0.25s ease;
+}
+.lightbox-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+}
+.lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">✕</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+const lbClose = document.getElementById('lightbox-close');
+
+document.querySelectorAll('.photo-slot img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+  lbImg.src = '';
+}
+
+lightbox.addEventListener('click', closeLightbox);
+lbClose.addEventListener('click', closeLightbox);
+lbImg.addEventListener('click', e => e.stopPropagation());
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
